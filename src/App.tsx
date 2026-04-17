@@ -40,10 +40,10 @@ const projects: Project[] = [
     github: 'https://github.com/SaadRimeh/fullstack-travelwebsite',
   },
   {
-    title: 'NextScale API Gateway (Upcoming)',
+    title: 'Institute Management System API',
     description:
-      'Placeholder for a future project focused on secure service orchestration, observability, and high-throughput API routing.',
-    github: 'https://github.com/SaadRimeh',
+      'A practical, production-ready backend for managing day-to-day institute operations. It is designed to keep the codebase clean, scalable, and easy to maintain while covering the core academic and administrative flows.',
+    github: 'https://github.com/SaadRimeh/institute-management-system',
   },
 ]
 
