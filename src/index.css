@@ -9,3 +9,9 @@ body,
   width: 100%;
   min-height: 100%;
 }
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
