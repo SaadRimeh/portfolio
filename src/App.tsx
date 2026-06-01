@@ -6,10 +6,26 @@ type Project = {
   title: string
   description: string
   stack: string
-  github: string
+  github?: string
+  live?: string
 }
 
 const projects: Project[] = [
+  {
+    title: 'GetAlphaBit - AI-Driven Assessment Platform',
+    description:
+      'Full-stack, AI-driven assessment application designed to generate technical placement tests, grade candidate submissions automatically, and present structured analysis dashboards.',
+    stack: 'React, Node.js, Express, MongoDB, OpenAI, Clerk',
+    live: 'https://getalphabitfrontend.onrender.com/admin',
+  },
+  {
+    title: 'Barbershop Booking & Reservation Backend',
+    description:
+      'A robust, production-ready RESTful backend built with Node.js, Express, and MongoDB. It handles user authentication and role management, dynamic appointment scheduling with calendar conflict prevention, product catalog management with Cloudinary-backed image uploads, stock-controlled product reservations, and automated cron jobs to release expired reserves.',
+    stack: 'Node.js, Express, MongoDB, Clerk, Cloudinary, Cron Jobs',
+    github: 'https://github.com/SaadRimeh/barbershop',
+    live: 'https://www.mediafire.com/file/p1y2oqtivo857ws/app-release.apk/file',
+  },
   {
     title: 'Gamza - Full-Stack Chat Web Site',
     description:
@@ -359,9 +375,18 @@ function App() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <p className="project-stack">{project.stack}</p>
-                <a href={project.github} target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <div className="project-links">
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer">
+                      View on GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a href={project.live} target="_blank" rel="noreferrer">
+                      Live Demo
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </div>

@@ -594,9 +594,15 @@ a {
   color: #7a6140;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.4rem;
+}
+
 .project-card a {
   width: fit-content;
-  margin-top: 0.4rem;
   font-weight: 700;
   color: var(--accent-strong);
   border-bottom: 1px solid rgba(127, 93, 51, 0.34);
