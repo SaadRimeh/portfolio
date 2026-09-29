@@ -1,5 +1,5 @@
 {
-  "name": "saad",
+  "name": "saad-rimeh-portfolio",
   "homepage": "https://SaadRimeh.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
@@ -8,6 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "node --experimental-strip-types --test tests/projects.test.mjs",
+    "check": "npm run lint && npm run test && npm run build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
