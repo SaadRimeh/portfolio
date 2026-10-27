@@ -54,14 +54,16 @@ function ProjectLinks({ project }: { project: Project }) {
           Live app <Icon name="external" />
         </a>
       )}
-      <a
-        href={`${github}/${project.repository}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`View ${project.title} source on GitHub (new tab)`}
-      >
-        <Icon name="github" /> Source code
-      </a>
+      {project.repository && (
+        <a
+          href={`${github}/${project.repository}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${project.title} source on GitHub (new tab)`}
+        >
+          <Icon name="github" /> Source code
+        </a>
+      )}
     </div>
   )
 }

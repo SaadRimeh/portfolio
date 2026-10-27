@@ -1,6 +1,5 @@
 {
   "name": "saad-rimeh-portfolio",
-  "homepage": "https://SaadRimeh.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +9,7 @@
     "lint": "eslint .",
     "test": "node --experimental-strip-types --test tests/projects.test.mjs",
     "check": "npm run lint && npm run test && npm run build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -27,7 +24,6 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",

@@ -14,13 +14,24 @@ export type Project = {
   description: string
   category: Exclude<Category, 'All projects'>
   tags: string[]
-  repository: string
+  repository?: string
   live?: string
   featured?: boolean
 }
 
 // Curated from public project READMEs. Keep deployment links separate from downloads.
 export const projects: Project[] = [
+  {
+    id: 'skillium',
+    title: 'Skillium',
+    subtitle: 'Learning, structured for progress.',
+    description:
+      'A full-featured educational platform designed to manage academic content, courses, lectures, assessments, and student–tutor meetings through a multi-role authorization system. Engineered sequential learning rules that control lesson access based on exam outcomes, including retry workflows after failed results and secure private meeting links for each student. Delivered documented REST APIs to support web, mobile, and administrative applications.',
+    category: 'Web',
+    tags: ['Education', 'Multi-role access', 'Assessments', 'REST APIs'],
+    live: 'https://skillium-gamma.vercel.app/',
+    featured: true,
+  },
   {
     id: 'ruscholar',
     title: 'RuScholar',
@@ -215,7 +226,7 @@ export function filterProjects(query: string, category: Category): Project[] {
     const searchable = [
       project.title,
       project.description,
-      project.repository,
+      project.repository ?? '',
       ...project.tags,
     ]
       .join(' ')

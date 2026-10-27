@@ -1,13 +1,26 @@
 import Icon from './Icon'
+import SalloumBarbershop from '../assets/salloum-barbershop.png'
+import Skillium from '../assets/skillium.png'
 
-// Decorative, intentionally simplified product illustrations, not screenshots.
+const projectImages: Record<string, string> = {
+  skillium: Skillium,
+  salloum: SalloumBarbershop,
+}
+
+// Decorative project visuals; the adjacent project copy supplies the context.
 export default function ProjectVisual({ id }: { id: string }) {
+  const projectImage = projectImages[id]
+
   return (
     <div className={`project-visual visual-${id}`} aria-hidden="true">
-      <span className="visual-caption">
-        PRODUCT EXPLORATION /{' '}
-        {id === 'nexus' ? 'DESKTOP' : id === 'ruscholar' ? 'WEB' : 'MOBILE'}
-      </span>
+      {projectImage ? (
+        <img className="project-image" src={projectImage} alt="" />
+      ) : (
+        <span className="visual-caption">
+          PRODUCT EXPLORATION /{' '}
+          {id === 'nexus' ? 'DESKTOP' : id === 'ruscholar' ? 'WEB' : 'MOBILE'}
+        </span>
+      )}
       {id === 'nexus' && (
         <div className="editor-window">
           <div className="window-bar">
@@ -85,41 +98,6 @@ export default function ProjectVisual({ id }: { id: string }) {
           </div>
           <div className="scholar-tag">
             <Icon name="check" /> Translate. Understand. Remember.
-          </div>
-        </>
-      )}
-      {id === 'salloum' && (
-        <>
-          <div className="barber-lettering">
-            <span>THE ART OF</span>
-            <strong>
-              Looking
-              <br />
-              <em>your best.</em>
-            </strong>
-            <span>SALLOUM / BARBERSHOP</span>
-          </div>
-          <div className="phone phone-barber">
-            <div className="phone-island" />
-            <div className="barber-app">
-              <div className="mini-nav">
-                S. <span>EN / ع</span>
-              </div>
-              <span className="mini-label">YOUR NEXT APPOINTMENT</span>
-              <h4>A fresh start.</h4>
-              <div className="barber-art">
-                <span>✂</span>
-                <i />
-              </div>
-              <p>Find your signature style.</p>
-              <div className="service-line">
-                <span>Haircut & styling</span>
-                <Icon name="external" />
-              </div>
-              <span className="mini-cta">
-                Explore appointments <Icon name="arrow" />
-              </span>
-            </div>
           </div>
         </>
       )}

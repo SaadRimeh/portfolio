@@ -453,6 +453,21 @@ h2 em {
   overflow: hidden;
   isolation: isolate;
 }
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual-skillium {
+  background: #fff;
+}
+.visual-skillium .project-image {
+  object-fit: contain;
+}
+.visual-salloum .project-image {
+  object-position: center 48%;
+}
 .visual-caption {
   position: absolute;
   left: 22px;
