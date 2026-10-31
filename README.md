@@ -22,6 +22,8 @@ npm run preview
 
 The `Check portfolio` GitHub Actions workflow runs the checks on pushes to `main` and pull requests.
 
+The `Deploy GitHub Pages` workflow builds with the `/portfolio/` base path and publishes every push to `main` to the existing `gh-pages` branch.
+
 ## Vercel deployment
 
 Import this repository into Vercel. The included `vercel.json` uses the Vite framework preset with these settings:
